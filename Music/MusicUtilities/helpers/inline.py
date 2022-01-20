@@ -11,11 +11,10 @@ from Music.config import GROUP, CHANNEL
 def play_markup(videoid, user_id):
     buttons= [
             [
-                InlineKeyboardButton(text="🛍️ Support Chat", url=f"https://t.me/{GROUP}"),
-            ],
+                
             [      
-                InlineKeyboardButton(text="🧰 Menu", callback_data=f'other {videoid}|{user_id}'),
-                InlineKeyboardButton(text="🗑️ Close", callback_data=f'close2')
+                InlineKeyboardButton(text="• Menu", callback_data=f'other {videoid}|{user_id}'),
+                InlineKeyboardButton(text="• Close", callback_data=f'close2')
             ],
         ]
     return buttons 
