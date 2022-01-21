@@ -27,12 +27,12 @@ def others_markup(videoid, user_id):
                 InlineKeyboardButton(text="⏹️", callback_data=f'stopvc2'),
             ],
             [
-                InlineKeyboardButton(text="🎸 Add Your List", callback_data=f'playlist {videoid}|{user_id}'),
-                InlineKeyboardButton(text="🎸 Add Group List", callback_data=f'group_playlist {videoid}|{user_id}')
+                InlineKeyboardButton(text=" Add Your List", callback_data=f'playlist {videoid}|{user_id}'),
+                InlineKeyboardButton(text=" Add Group List", callback_data=f'group_playlist {videoid}|{user_id}')
             ],
             [
-                InlineKeyboardButton(text="📮 Get Audio", callback_data=f'gets audio|{videoid}|{user_id}'),
-                InlineKeyboardButton(text="📮 Get Video", callback_data=f'gets video|{videoid}|{user_id}')
+                InlineKeyboardButton(text=" Get Audio", callback_data=f'gets audio|{videoid}|{user_id}'),
+                InlineKeyboardButton(text=" Get Video", callback_data=f'gets video|{videoid}|{user_id}')
             ],
             [
                 InlineKeyboardButton(text="⏪ Back To Button", callback_data=f'goback {videoid}|{user_id}'),
