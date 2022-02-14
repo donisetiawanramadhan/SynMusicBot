@@ -61,7 +61,7 @@ play_keyboard = InlineKeyboardMarkup(
                 ],
                 [
                     InlineKeyboardButton(
-                        "Close Menu", callback_data="close"
+                        "🗑 Close Menu", callback_data="close"
                     )
                 ]    
             ]
