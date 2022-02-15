@@ -163,7 +163,7 @@ async def vplay(c: Client, message: Message):
         if replied.video or replied.document:
             what = "Audio Searched"
             await LOG_CHAT(message, what)
-            loser = await replied.reply("📥 **Mengunduh Video... Mohon Bersabar**")
+            loser = await replied.reply("🖨 **Mengunduh Video... Mohon Bersabar**")
             dl = await replied.download()
             link = replied.link
             if len(message.command) < 2:
@@ -194,8 +194,8 @@ async def vplay(c: Client, message: Message):
                     f"""
 📊 **Ditambahkan Ke Antrian**
 📑 **Judul:** [{songname[:999]}]({link})
-👨🏻‍🎤 **Permintaan:** {requester}
-📝 **Posisi Antrian** {pos}
+👤 **Permintaan:** {requester}
+💻 **Posisi Antrian** {pos}
 """,
                     disable_web_page_preview=True,
                     reply_markup=keyboard,
@@ -222,10 +222,10 @@ async def vplay(c: Client, message: Message):
                 await app.send_message(
                     chat_id,
                     f"""
-🤖 **Streaming Video Dimulai**
+🎥 **Streaming Video Dimulai**
 📊 **Judul:** [{songname[:999]}]({link})
-👨🏻‍🎤 **Permintaan:** {requester}
-📚 **Diputar Di:** {message.chat.title}
+👤 **Permintaan:** {requester}
+💻 **Diputar Di:** {message.chat.title}
 """,
                     disable_web_page_preview=True,
                     reply_markup=keyboard,
@@ -264,9 +264,9 @@ async def vplay(c: Client, message: Message):
                                 f"""
 📊 **Ditambahkan Ke Antrian**
 📑 **Nama:** [{songname[:999]}]({url})
-♻️ **Durasi:** {duration}
-👨🏻‍🎤 **Permintaan:** {requester}
-♨️ **Posisi Antrian** {pos}
+🕕 **Durasi:** {duration}
+👤 **Permintaan:** {requester}
+💻 **Posisi Antrian** {pos}
 """,
                             disable_web_page_preview=True,
                             reply_markup=keyboard,
@@ -288,11 +288,11 @@ async def vplay(c: Client, message: Message):
                             await app.send_message(
                                 chat_id,
                                 f"""
-🤖 **Streaming Video Dimulai**
+🎥 **Streaming Video Dimulai**
 📑 **Nama:** [{songname[:999]}]({url})
 ⏱️ **Durasi:** {duration}
-👨🏻‍🎤 **Permintaan:** {requester}
-🦊 **Diputar Di:** {message.chat.title}
+👤 **Permintaan:** {requester}
+💻 **Diputar Di:** {message.chat.title}
 """,
                                 disable_web_page_preview=True,
                                 reply_markup=keyboard,
@@ -310,11 +310,11 @@ async def playlist(client, m: Message):
         if len(chat_queue) == 1:
             await m.delete()
             await m.reply(
-                f"**🤖 SEKARANG MEMUTAR:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
+                f"**🎥 SEKARANG MEMUTAR:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
                 disable_web_page_preview=True,
             )
         else:
-            QUE = f"**🤖 SEKARANG MEMUTAR:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n**⏯ DAFTAR ANTRIAN:**"
+            QUE = f"**🎥 SEKARANG MEMUTAR:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n**⏯ DAFTAR ANTRIAN:**"
             l = len(chat_queue)
             for x in range(1, l):
                 hmm = chat_queue[x][0]
