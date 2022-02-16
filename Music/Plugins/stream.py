@@ -94,7 +94,7 @@ async def vplay(c: Client, message: Message):
 » ❌ Blokir pengguna
 » ❌ Tambah pengguna
 » ❌ Kelola obrolan suara
-✨ Powered by: [{BOT_NAME}](t.me/{BOT_USERNAME})
+⚡ Powered by: [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
             disable_web_page_preview=True,
         )
@@ -104,7 +104,7 @@ async def vplay(c: Client, message: Message):
             f"""
 💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
 » ❌ Kelola obrolan suara
-✨ Powered by: [{BOT_NAME}](t.me/{BOT_USERNAME})
+⚡ Powered by: [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
             disable_web_page_preview=True,
         )
@@ -114,7 +114,7 @@ async def vplay(c: Client, message: Message):
             f"""
 💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
 » ❌ Hapus pesan
-✨ Powered by: [{BOT_NAME}](t.me/{BOT_USERNAME})
+⚡ Powered by: [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
             disable_web_page_preview=True,
         )
@@ -124,7 +124,7 @@ async def vplay(c: Client, message: Message):
             f"""
 💡 Untuk menggunakan saya, Saya perlu menjadi admin dengan izin:
 » ❌ Tambah pengguna
-✨ Powered by: [{BOT_NAME}](t.me/{BOT_USERNAME})
+⚡ Powered by: [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
             disable_web_page_preview=True,
         )
@@ -194,8 +194,8 @@ async def vplay(c: Client, message: Message):
                     f"""
 📊 **Ditambahkan Ke Antrian**
 📑 **Judul:** [{songname[:999]}]({link})
-👤 **Permintaan:** {requester}
-💻 **Posisi Antrian** {pos}
+👨🏻‍🎤 **Permintaan:** {requester}
+📝 **Posisi Antrian** {pos}
 """,
                     disable_web_page_preview=True,
                     reply_markup=keyboard,
@@ -224,8 +224,8 @@ async def vplay(c: Client, message: Message):
                     f"""
 🎥 **Streaming Video Dimulai**
 📊 **Judul:** [{songname[:999]}]({link})
-👤 **Permintaan:** {requester}
-💻 **Diputar Di:** {message.chat.title}
+💁‍♂️ **Permintaan:** {requester}
+📚 **Diputar Di:** {message.chat.title}
 """,
                     disable_web_page_preview=True,
                     reply_markup=keyboard,
@@ -264,9 +264,9 @@ async def vplay(c: Client, message: Message):
                                 f"""
 📊 **Ditambahkan Ke Antrian**
 📑 **Nama:** [{songname[:999]}]({url})
-🕕 **Durasi:** {duration}
-👤 **Permintaan:** {requester}
-💻 **Posisi Antrian** {pos}
+⏰ **Durasi:** {duration}
+👮‍♂️ **Permintaan:** {requester}
+📝 **Posisi Antrian** {pos}
 """,
                             disable_web_page_preview=True,
                             reply_markup=keyboard,
@@ -291,8 +291,8 @@ async def vplay(c: Client, message: Message):
 🎥 **Streaming Video Dimulai**
 📑 **Nama:** [{songname[:999]}]({url})
 ⏱️ **Durasi:** {duration}
-👤 **Permintaan:** {requester}
-💻 **Diputar Di:** {message.chat.title}
+👨🏻‍🎤 **Permintaan:** {requester}
+☎️ **Diputar Di:** {message.chat.title}
 """,
                                 disable_web_page_preview=True,
                                 reply_markup=keyboard,
