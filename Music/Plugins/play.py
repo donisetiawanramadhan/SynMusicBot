@@ -252,7 +252,7 @@ async def play(_, message: Message):
             what = "Command"
             await LOG_CHAT(message, what)
             user_name = message.from_user.first_name
-            thumb ="cache/audio.png"
+            thumb ="cache/playlist.png"
             buttons = playlist_markup(user_name, user_id)
             hmo = await message.reply_photo(
             photo=thumb, 
