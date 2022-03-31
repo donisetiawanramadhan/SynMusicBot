@@ -287,13 +287,12 @@ async def play(_, message: Message):
         thumb ="cache/IMG_2.png"
         await mystic.delete()   
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
-        hmo = await message.reply_photo(
-            photo=thumb, 
-            caption=(f"1️⃣ <b>{title1[:25]}</b> \n┣ 💡 __Powered By {BOT_NAME}__\n┗ ⚡ <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n\n2️⃣ <b>{title2[:25]}</b> \n┣ 💡 __Powered By {BOT_NAME}__\n┗ ⚡ <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n\n3️⃣ <b>{title3[:25]}</b> \n┣ 💡 __Powered By {BOT_NAME}__\n┗ ⚡ <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n\n4️⃣ <b>{title4[:25]}</b> \n┣ 💡 __Powered By {BOT_NAME}__\n┗ ⚡ <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n\n5️⃣ <b>{title5[:25]}</b> \n┣ 💡 __Powered {BOT_NAME}__\n┗ ⚡ <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>"),    
+        hmo = await mystic.edit(
+            f"❓ Choose the results to play :\n\n1️⃣ <b>[{title1[:40]}]({url})</b>\n  ├  💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  └ ⚡ __Powered by sʏɴ ʀᴏʙᴏᴛ__\n\n2️⃣ <b>[{title2[:40]}]({url})</b>\n  ├  💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  └ ⚡ __Powered by sʏɴ ʀᴏʙᴏᴛ__\n\n3️⃣ <b>[{title3[:40]}]({url})</b>\n  ├  💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  └ ⚡ __Powered by sʏɴ ʀᴏʙᴏᴛ__\n\n4️⃣ <b>[{title4[:40]}]({url})</b>\n  ├  💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  └ ⚡ __Powered by sʏɴ ʀᴏʙᴏᴛ__\n\n5️⃣ <b>[{title5[:40]}]({url})</b>\n  ├  💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  └ ⚡ __Powered by sʏɴ ʀᴏʙᴏᴛ__",    
             reply_markup=InlineKeyboardMarkup(buttons),
-        )  
-        disable_web_page_preview=True
-        return   
+            disable_web_page_preview=True
+        ) 
+        return
     if await is_active_chat(chat_id):
         position = await put(chat_id, file=file)
         _chat_ = ((str(file)).replace("_","", 1).replace("/","", 1).replace(".","", 1))
