@@ -192,10 +192,12 @@ play_list_keyboard = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Users Playlist", callback_data="P_list"
-                    ),
+                        "Personal Playlist", callback_data="P_list"
+                    )
+                ],
+                [
                     InlineKeyboardButton(
-                        "Groups Playlist", callback_data="G_list"
+                        "Group's Playlist", callback_data="G_list"
                     )
                 ],
                 [
@@ -206,14 +208,17 @@ play_list_keyboard = InlineKeyboardMarkup(
             ]
         )
 
+
 def playlist_markup(user_name, user_id):
     buttons= [
             [
-                InlineKeyboardButton(text=f"Groups", callback_data=f'play_playlist {user_id}|group'),
-                InlineKeyboardButton(text=f"{user_name[:8]}", callback_data=f'play_playlist {user_id}|personal'),
+                InlineKeyboardButton(text=f"Group's Playlist", callback_data=f'play_playlist {user_id}|group')
             ],
             [
-                InlineKeyboardButton(text="🗑 Close Playlist", callback_data="close2")              
+                InlineKeyboardButton(text=f"{user_name[:8]}'s Playlist", callback_data=f'play_playlist {user_id}|personal')
+            ],
+            [
+                InlineKeyboardButton(text="🗑 Close", callback_data="close2")              
             ],
         ]
     return buttons
