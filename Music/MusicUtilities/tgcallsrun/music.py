@@ -150,7 +150,7 @@ Downloading....
                 await app.send_photo(chat_id,
                 photo= thumb,
                 reply_markup=InlineKeyboardMarkup(buttons),    
-                caption=(f"🎶 <b>Started Playing: </b>[{title[:25]}]({url}) \n🕰 <b>Duration:</b> {duration} Mins\n💡 <b>Info:</b> [Get Information Song](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n🎧 **Requested By:** {semx.mention}")
+                caption=(f"🎥 <b>Started Playing: </b>[{title[:25]}]({url}) \n🕰 <b>Duration:</b> {duration} Mins\n💡 <b>Info:</b> [Get Information Song](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n🎧 **Requested By:** {semx.mention}")
             )   
                 os.remove(thumb)
             else:      
@@ -180,7 +180,7 @@ Downloading....
                 await app.send_photo(chat_id,
                 photo=f"downloads/{_chat_}final.png",
                 reply_markup=InlineKeyboardMarkup(buttons),
-                caption=f"🎶 <b>Started Playing:</b> {title} \n🕰 <b>Duration:</b> {duration} \n🎧 <b>Requested By: </b> {username}",
+                caption=f"🎥 <b>Started Playing:</b> {title} \n🕰 <b>Duration:</b> {duration} \n🎧 <b>Requested By: </b> {username}",
                 )
                 return
            
