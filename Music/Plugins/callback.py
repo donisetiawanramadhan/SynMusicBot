@@ -171,7 +171,7 @@ async def skipvc(_,CallbackQuery):
             rpk = "["+user_name+"](tg://user?id="+str(user_id)+")"
             await remove_active_chat(chat_id)
             await CallbackQuery.answer()
-            await CallbackQuery.message.reply(f"**⛔️ Skip Button Used By {rpk}**\n\n**🤦‍♂ No More Music In** __Queues__ \n\n**📨 Leaving Voice Chat Now..**")
+            await CallbackQuery.message.reply(f"** Skip Button Used By {rpk}**\n\n**🤦‍♂ No More Music In** __Queues__ \n\n** Leaving Voice Chat Now..**")
             await music.pytgcalls.leave_group_call(chat_id)
             return
         else:
@@ -443,7 +443,7 @@ Personal Playlist Playing."""
                     m = await CallbackQuery.message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),    
-                    caption=(f"🎥<b>__Playing:__ </b>[{title[:25]}]({url}) \n⏳<b>__Duration:__</b> {duration} \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n👤**__Requested by:__** {checking}")
+                    caption=(f"🎥<b>__Playing:__ </b>[{title[:25]}]({url}) \n⏳<b>__Duration:__</b> {duration} \n💡<b>__Info:__</b> [Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n🎧**__Requested by:__** {checking}")
                 )   
                     os.remove(thumb)
                     await CallbackQuery.message.delete()
@@ -565,7 +565,7 @@ Group Playlist Playing."""
                             except Exception as e:
                                 taken = "00:00"
                             size = d['_total_bytes_str']
-                            mystic.edit(f"**📥 Downloaded {title[:50]}.....**\n\n**📚 FileSize:** {size}\n**⚡ Time Taken:** {taken} sec\n\n**📑 Converting Flicks File**")
+                            mystic.edit(f"**📥 Downloaded {title[:50]}.....**\n\n**📚 FileSize:** {size}\n**⚡ Time Taken:** {taken} sec\n\n**📑 Converting Syn File**")
                             print(f"[{videoid}] Downloaded| Elapsed: {taken} seconds")  
                     loop = asyncio.get_event_loop()
                     xx = await loop.run_in_executor(None, download, url, my_hook)
@@ -756,7 +756,7 @@ async def P_list(_,CallbackQuery):
         user_id = CallbackQuery.from_user.id
         user_name = CallbackQuery.from_user.first_name
         a2 = InlineKeyboardButton(text=f"Play {user_name[:17]}'s Playlist", callback_data=f'play_playlist {user_id}|personal')
-        a3 = InlineKeyboardButton(text=f"📨 Check Playlist", url=urlxp)
+        a3 = InlineKeyboardButton(text=f"Check Playlist", url=urlxp)
         key = InlineKeyboardMarkup(
             [
                 [
@@ -811,7 +811,7 @@ async def G_list(_,CallbackQuery):
         user_id = CallbackQuery.from_user.id
         user_name = CallbackQuery.from_user.first_name
         a1 = InlineKeyboardButton(text=f"Play Group's Playlist", callback_data=f'play_playlist {user_id}|group')
-        a3 = InlineKeyboardButton(text=f"📨 Check Playlist", url=urlxp)
+        a3 = InlineKeyboardButton(text=f"Check Playlist", url=urlxp)
         key = InlineKeyboardMarkup(
             [
                 [
