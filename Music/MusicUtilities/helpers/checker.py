@@ -1,8 +1,7 @@
 from Music import BOT_USERNAME, LOG_GROUP_ID, app
-from Music.MusicUtilities.database import blacklisted_chats, is_gbanned_user, is_on_off
-from Music.MusicUtilities.database
-from Music.MusicUtilities.database
-
+from Music.MusicUtilities.database.blacklist import blacklisted_chats
+from Music.MusicUtilities.database.gbanned import is_gbanned_user
+from Music.MusicUtilities.database.onof import is_on_off
 
 def checker(mystic):
     async def wrapper(_, message):
