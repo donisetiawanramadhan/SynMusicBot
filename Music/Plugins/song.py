@@ -117,7 +117,7 @@ async def mpthree(_, message: Message):
             ID5 = (result[4]["id"])
         except Exception as e:
             return await mystic.edit_text(f"Soung Not Found.\n**Possible Reason:**{e}")
-        thumb ="cache/IMG_2.png"
+        thumb ="cache/results.png"
         await mystic.delete()   
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         hmo = await message.reply_photo(
