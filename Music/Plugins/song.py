@@ -89,11 +89,8 @@ async def mpthree(_, message: Message):
         m = await message.reply_photo(
             photo=thumb,
             reply_markup=InlineKeyboardMarkup(buttons),    
-            caption=f"""
-<b>🏷️ Title:</b> [{title[:25]}]({url})
-├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
-└ ⚡ **Powered by:** sʏɴ ᴍᴜsɪᴄ
-"""  
+            caption=(f"🎥<b>__Title:__ </b>[{title[:25]}]({url})\n💡[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{id})")
+        )   
         os.remove(thumb)
     else:
         if len(message.command) < 2:
@@ -120,14 +117,15 @@ async def mpthree(_, message: Message):
             ID5 = (result[4]["id"])
         except Exception as e:
             return await mystic.edit_text(f"Soung Not Found.\n**Possible Reason:**{e}")
-        thumb ="cache/results.png"
+        thumb ="cache/IMG_2.png"
         await mystic.delete()   
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
-        hmo = hmo = await message.reply_text(
-            f"**❓ Choose the results to download**\n\n1️⃣ <b>{title1[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__\n\n2️⃣ <b>{title2[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__\n\n3️⃣ <b>{title3[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__\n\n4️⃣ <b>{title4[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__\n\n5️⃣ <b>{title5[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__",    
+        hmo = await message.reply_photo(
+            photo=thumb, 
+            caption=(f"**Flicks X Inline Music Downloader**\n\n1️⃣<b>{title1}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n\n2️⃣<b>{title2}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n\n3️⃣<b>{title3}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n\n4️⃣<b>{title4}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n\n5️⃣<b>{title5}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>"),    
             reply_markup=InlineKeyboardMarkup(buttons),
-            disable_web_page_preview=True
         )  
+        disable_web_page_preview=True
         return   
     
     
@@ -170,11 +168,8 @@ async def startyuplay(_,CallbackQuery):
     m = await CallbackQuery.message.reply_photo(
         photo=thumb,
         reply_markup=InlineKeyboardMarkup(buttons),    
-        caption=f"""
-<b>🏷️ Title:</b> [{title[:25]}]({url})
-├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
-└ ⚡ **Powered by:** sʏɴ ᴍᴜsɪᴄ
-"""  
+        caption=(f"🎥<b>__Title:__ </b>[{title[:25]}]({url})\n💡[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{id})")
+    )   
     os.remove(thumb)
     await CallbackQuery.message.delete()
 
@@ -233,18 +228,18 @@ async def chonga(_,CallbackQuery):
     if i == 1:
         buttons = search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, duration9, duration10 ,user_id, query)
         await CallbackQuery.edit_message_text(
-            f"**❓ Choose the results to download**\n\n6️⃣ <b>{title6[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__\n\n7️⃣ <b>{title7[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__\n\n8️⃣ <b>{title8[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__\n\n9️⃣ <b>{title9[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__\n\n🔟 <b>{title10[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__",    
+            f"6️⃣<b>{title6}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n\n7️⃣<b>{title7}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n\n8️⃣<b>{title8}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n\n9️⃣<b>{title9}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n\n🔟<b>{title10}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>",    
             reply_markup=InlineKeyboardMarkup(buttons),
-            disable_web_page_preview=True
-        )
+        )  
+        disable_web_page_preview=True
         return    
     if i == 2:
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await CallbackQuery.edit_message_text(
-            f"**❓ Choose the results to download**\n\n1️⃣ <b>{title1[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__\n\n2️⃣ <b>{title2[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__\n\n3️⃣ <b>{title3[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__\n\n4️⃣ <b>{title4[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__\n\n5️⃣ <b>{title5[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ ⚡ __Powered by sʏɴ ᴍᴜsɪᴄ__",    
+            f"1️⃣<b>{title1}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n\n2️⃣<b>{title2}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n\n3️⃣<b>{title3}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n\n4️⃣<b>{title4}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n\n5️⃣<b>{title5}</b>\n  ┗  🔗 <u>__[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>",    
             reply_markup=InlineKeyboardMarkup(buttons),
-            disable_web_page_preview=True 
         )  
+        disable_web_page_preview=True
         return    
       
       
@@ -263,11 +258,11 @@ def search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, dura
                 InlineKeyboardButton(text="4️⃣", callback_data=f'beta {ID4}|{duration4}|{user_id}'),
                 InlineKeyboardButton(text="5️⃣", callback_data=f'beta {ID5}|{duration5}|{user_id}')
             ],
-            [
-                InlineKeyboardButton(text="➡️", callback_data=f'chonga 1|{query}|{user_id}')
-            ],
-            [
-                InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f"ppcl2 smex|{user_id}")
+            [ 
+                
+                InlineKeyboardButton(text="⬅️", callback_data=f'chonga 1|{query}|{user_id}'), 
+                InlineKeyboardButton(text="🗑", callback_data=f"ppcl2 smex|{user_id}") ,
+                InlineKeyboardButton(text="➡️", callback_data=f'chonga 1|{query}|{user_id}')             
             ],
         ]
     return buttons   
@@ -284,10 +279,10 @@ def search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, du
                 InlineKeyboardButton(text="🔟", callback_data=f'beta {ID10}|{duration10}|{user_id}')
             ],
             [ 
-                InlineKeyboardButton(text="⬅️", callback_data=f'chonga 2|{query}|{user_id}')
-            ],
-            [
-                InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f"ppcl2 smex|{user_id}")
+                
+                InlineKeyboardButton(text="⬅️", callback_data=f'chonga 2|{query}|{user_id}'), 
+                InlineKeyboardButton(text="🗑️", callback_data=f"ppcl2 smex|{user_id}") ,
+                InlineKeyboardButton(text="➡️", callback_data=f'chonga 2|{query}|{user_id}')             
             ],
         ]
     return buttons     
@@ -295,11 +290,11 @@ def search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, du
 def gets(videoid, user_id):
     buttons= [
             [
-                InlineKeyboardButton(text="Get Audio", callback_data=f'gets audio|{videoid}|{user_id}'),
-                InlineKeyboardButton(text="Get Video", callback_data=f'gets video|{videoid}|{user_id}')
+                InlineKeyboardButton(text="🎙 Get Audio", callback_data=f'gets audio|{videoid}|{user_id}'),
+                InlineKeyboardButton(text="🎥 Get Video", callback_data=f'gets video|{videoid}|{user_id}')
             ],
             [
-                InlineKeyboardButton(text="🗑 Close", callback_data=f'close2')
+                InlineKeyboardButton(text="🗑 Close Menu", callback_data=f'close2')
             ],
         ]
     return buttons
