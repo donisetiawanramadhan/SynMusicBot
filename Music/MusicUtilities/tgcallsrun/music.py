@@ -141,8 +141,7 @@ Downloading....
                 ctitle = await CHAT_TITLE(ctitle)
                 f2 = open(f'search/{afk}id.txt', 'r')        
                 userid =(f2.read())
-                status = Image.open(f"{status}")
-                thumb = await gen_thumb(videoid, status)
+                thumb = await gen_thumb(thumbnail, title, userid, theme, ctitle)
                 user_id = userid
                 videoid = afk
                 buttons = play_markup(videoid, user_id)
@@ -179,7 +178,7 @@ Downloading....
                 else:
                     buttons = play_markup(videoid, user_id)
                 await app.send_photo(chat_id,
-                photo= thumb,
+                photo=f"downloads/{_chat_}final.png",
                 reply_markup=InlineKeyboardMarkup(buttons),
                 caption=f"🎥 <b>Started Playing: </b>[{title[:25]}]({url}) \n⏱️ <b>Duration:</b> {duration} \n🎧 <b>Requested By: </b> {username}",
                 )
