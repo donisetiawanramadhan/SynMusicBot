@@ -89,8 +89,11 @@ async def mpthree(_, message: Message):
         m = await message.reply_photo(
             photo=thumb,
             reply_markup=InlineKeyboardMarkup(buttons),    
-            caption=(f"🎥<b>__Title:__ </b>[{title[:25]}]({url})\n💡[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{id})")
-        )   
+            caption=f"""
+<b>🏷️ Title:</b> [{title[:25]}]({url})
+├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
+└ ⚡ **Powered by:** [{BOT_NAME}](t.me/{BOT_USERNAME})
+"""  
         os.remove(thumb)
     else:
         if len(message.command) < 2:
@@ -167,8 +170,11 @@ async def startyuplay(_,CallbackQuery):
     m = await CallbackQuery.message.reply_photo(
         photo=thumb,
         reply_markup=InlineKeyboardMarkup(buttons),    
-        caption=(f"🎥<b>__Title:__ </b>[{title[:25]}]({url})\n💡[Get Additional Information](https://t.me/{BOT_USERNAME}?start=info_{id})")
-    )   
+        caption=f"""
+<b>🏷️ Title:</b> [{title[:25]}]({url})
+├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
+└ ⚡ **Powered by:** [{BOT_NAME}](t.me/{BOT_USERNAME})
+"""  
     os.remove(thumb)
     await CallbackQuery.message.delete()
 
